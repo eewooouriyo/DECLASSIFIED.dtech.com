@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DECLASSIFIED</title>
+
+<style>
+body{
+background:black;
+color:#00ff88;
+font-family:Courier New;
+padding:20px;
+}
+
+#screen{
+white-space:pre-line;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="screen"></div>
+
+<script defer>
+
+let text = [
+"BOOTING D-TECH SYSTEM...",
+"",
+"ACCESSING ARCHIVES...",
+"",
+"WARNING the data you are going to see is property of D-TECH do not distribute",
+"",
+"Data that is unclassified:",
+"-----------------------------",
+"D-TECH CORPORATION",
+"-----------------------------",
+"",
+"WHAT IS D-TECH?",
+"D-TECH is a technological division focused on experimental systems,",
+"simulation environments and digital control interfaces.",
+"",
+"WHAT DOES D-TECH DO?",
+"- Creates test environments (T.Z) for [CLASSIFIED]",
+"- Develops artificial systems for [CLASSIFIED]",
+"- Manages unknown data structures",
+"- Studies anomalous behavior in digital space And/or real life",
+"- Studies anomalies from the universe",
+"",
+"HISTORY:",
+"Founded: UNKNOWN",
+"Recovered after incident: [DATA CORRUPTED]",
+"",
+"PROJECTS:",
+"- D-TECH SYSTEM",
+"- TERMINAL INTERFACE",
+"- FILE CONTROL UNIT",
+"- [REDACTED]",
+"- E.L.I.P.S.I.S mission ´ASTRA I´",
+"",
+"STATUS:",
+"ACTIVE",
+"",
+"WARNING:",
+"Some data may be hidden or classified.",
+"",
+"> END OF FILE"
+];
+
+let i = 0;
+let j = 0;
+
+function typeLine(){
+
+if(i < text.length){
+
+if(j < text[i].length){
+document.getElementById("screen").innerHTML += text[i][j];
+j++;
+setTimeout(typeLine, 20);
+}else{
+document.getElementById("screen").innerHTML += "\n";
+i++;
+j = 0;
+setTimeout(typeLine, 200);
+}
+
+}
+
+}
+
+typeLine();
+
+</script>
+
+</body>
+</html>
